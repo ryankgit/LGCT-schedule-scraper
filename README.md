@@ -166,6 +166,7 @@ _Note: A typical output file is substantially longer than the example shown abov
 * Account for additional "Short Course" text under Tour time when writing Employee Tours to file
 * Collect and write occurances of "No [Employee]" to file, under appropriate dates
 * Add GUI to configure Employee search settings
+* Write error message in file if leftover employee instances in EmployeeTourData
 
 # Credits
 
