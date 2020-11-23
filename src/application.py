@@ -66,10 +66,8 @@ if __name__ == '__main__':
     main()
 
 
-# TODO: - Move file write operations to new file
-#       - write error message in file if leftover employee instances in EmployeeTourData
-#          (If not gonna pop them from EmployeeTourData, increment count, compare count to length, print error if less)
-#  Publish on GitHub:
-#      - Remove file PATH and DOC ID, replace with <insert here>
-#      - Provide file format of doc in read me
-#      - Write read me
+# TODO:
+#   - write error message in file if leftover employee instances in EmployeeTourData
+#       (If not gonna pop them from EmployeeTourData, increment count, compare count to length, print error if less)
+#   - account for 'short course' label when writing Employee Tours
+
