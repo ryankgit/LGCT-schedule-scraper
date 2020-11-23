@@ -24,6 +24,8 @@ This application aims to fix that by scraping the Work Schedule for only a speci
 
 ![Google Docs current work schedule example](example_images/example_schedule.png)
 
+_Note: Employee names removed for privacy._
+
 
 # Dependencies
 
@@ -158,7 +160,7 @@ After the Employee name is entered, the program will create a text file containi
 
 ![example program output](example_images/program_output.png)
 
-_Note: A typical output file is substantially longer than the example shown above. The above example shows only the first few entries in the output file._
+_Note: Employee name removed for privacy. A typical output file is substantially longer than the example shown above. The above example shows only the first few entries in the output file._
 
 # Future Work
 
