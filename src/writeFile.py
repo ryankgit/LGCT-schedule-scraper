@@ -101,12 +101,12 @@ def write_tours_to_file(current_index, next_index, f):
     :param current_index:
     :param f: file
     """
-    # TODO This concept works, but is not efficient or 100% accurate. Needs to be updated.
+    # TODO This concept works, but is implemented efficiently or 100% accurate. Needs to be updated.
     # write employee tours to file
     for et_index in EmployeeTourData.et_list:
         if current_index < et_index < next_index:
             # TODO Format, determine what to write better, make sure contains time in one of the lines
-            #   if line is blank, don't print, unless two in a row(?) indicates unbooked tour
+            #   if line is blank, don't print, unless two in a row, which indicates unbooked tour
             employee = TextData.t_dct.get(et_index)
             u1_employee = TextData.t_dct.get(et_index - 1)
             if ':' in u1_employee:
@@ -126,19 +126,14 @@ def write_tours_to_file(current_index, next_index, f):
 
             try:    # in try-catch bc could try to get index off bottom of TextData
                 # print below employee until int or until 2 consecutive blank lines (unbooked tours)
-                a1_employee = TextData.t_dct.get(et_index + 1)
-                a2_employee = TextData.t_dct.get(et_index + 2)
-                a3_employee = TextData.t_dct.get(et_index + 3)
-                if a1_employee is '':
-                    f.write('Unbooked\n')
-                elif a2_employee is '':
-                    f.write('Unbooked\n')
-                elif a3_employee is '':
-                    f.write('Unbooked\n')
-                else:
-                    f.write(a1_employee)
-                    f.write(a2_employee)
-                    f.write(a3_employee + '\n')
+                i = 1
+                while i < 4:
+                    employee = TextData.t_dct.get(et_index + i)
+                    if employee is '':
+                        f.write('\n')
+                    else:
+                        f.write(employee)
+                    i += 1
 
             except IndexError:
                 print('Index Error')
