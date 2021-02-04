@@ -164,6 +164,7 @@ _Note: Employee name removed for privacy. A typical output file is substantially
 
 # Future Work
 
+* **Re-write implementing a data-parsing library**
 * Improve program efficiency and accuracy of writing Employee Tours to file
 * Account for additional "Short Course" text under Tour time when writing Employee Tours to file
 * Collect and write occurances of "No [Employee]" to file, under appropriate dates
