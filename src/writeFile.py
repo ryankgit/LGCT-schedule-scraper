@@ -101,7 +101,8 @@ def write_tours_to_file(current_index, next_index, f):
     :param current_index:
     :param f: file
     """
-    # TODO This concept works, but is implemented efficiently or 100% accurate. Needs to be updated.
+    # TODO This concept works, but is not implemented efficiently or 100% accurate. Needs to be updated.
+    #   Would be helpful to reimplement w/ a data-parsing library.
     # write employee tours to file
     for et_index in EmployeeTourData.et_list:
         if current_index < et_index < next_index:
