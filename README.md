@@ -10,13 +10,13 @@ the Employee's work schedule to a text document.
 * Employee has an unbooked Tour(s)
 * Employee has a booked High Ropes
 * Employee has an unbooked High Ropes
-* Emplotee has a task assigned to them
+* Employee has a task assigned to them
 
-_Note: for ease of understanding, High Ropes and Tours will both be refered to as "Tours" for the rest of this document._
+_Note: for ease of understanding, High Ropes and Tours will both be referred to as "Tours" for the rest of this document._
 
 # Motivation
 
-Assigned Tours and tasks for all Employees are located in one Google Doc [Work Schedule]. This means an Employee cannot glance at 
+Assigned Tours and tasks for all Employees are located in one Google Doc (Work Schedule). This means an Employee cannot glance at 
 the Work Schedule and see their hours, as they need to sift through the Tours and tasks assigned to every employee at the company. 
 This application aims to fix that by scraping the Work Schedule for only a specified Employee's Tours and tasks and writing only those times to a text file.
 
@@ -40,21 +40,17 @@ _Note: Employee names removed for privacy._
 * Reference [Google Docs API Python Quickstart Guide](https://developers.google.com/docs/api/quickstart/python) for in-depth 
 instructions and troubleshooting installing the Google Docs API and generating the required credentials and tokens to use the Google Docs API.
 
-**Setup project:**
+**Config File:**
 
-* In `application.py`, set document ID:
+* In `config.py`, set up the following fields:
 ~~~python
-DOCUMENT_ID = "<set-document-ID-here>"
-~~~
-
-* In `writeFile.py`, set text file save path:
-~~~python
-PATH = "<set-text-file-save-path-here>"
+DOCUMENT_ID = "<document-id>"
+PATH = "<text-file-save-path>"
 ~~~
 
 _Note: this program is written to only correctly parse data gathered from Docs formatted in a very specific way. 
 It is highly likely any attempt to use this program on a document not formatted like Work Schedule will fail. 
-Rewritting large portions of `extractText.py` and `writeFile.py` would be required to use this program on another Doc._
+Rewriting large portions of `extractText.py` and `writeFile.py` would be required to use this program on another Doc._
 
 
 # Project Files
@@ -165,9 +161,10 @@ _Note: Employee name removed for privacy. A typical output file is substantially
 # Future Work
 
 * **Re-write implementing a data-parsing library**
+* **Write to a CSV file instead of text file ([see here](https://docs.python.org/3/library/csv.html))**
 * Improve program efficiency and accuracy of writing Employee Tours to file
 * Account for additional "Short Course" text under Tour time when writing Employee Tours to file
-* Collect and write occurances of "No [Employee]" to file, under appropriate dates
+* Collect and write occurrences of "No [Employee]" to file, under appropriate dates
 * Add GUI to configure Employee search settings
 * Write error message in file if leftover employee instances in EmployeeTourData
 

@@ -1,7 +1,6 @@
 #
 # Run main to extract text from Doc, write employee's schedule to text file
 # ======================================================================================================================
-# Imports
 from extractText import TextData, DateData, SupData, EmployeeTourData, read_structural_elements
 # a lot of these data imports can be removed when program is finished development
 from writeFile import write_to_file
@@ -13,9 +12,10 @@ from apiclient import discovery
 from httplib2 import Http
 # ======================================================================================================================
 # Constants for Doc
-SCOPES = 'https://www.googleapis.com/auth/documents.readonly'
-DISCOVERY_DOC = 'https://docs.googleapis.com/$discovery/rest?version=v1'
-DOCUMENT_ID = '1hf83Hrd8Nq_3rHsQl77ml53z9QMPsS4cgu-2m6vc1YI'
+import config
+SCOPES = config.SCOPES
+DISCOVERY_DOC = config.DISCOVERY_DOC
+DOCUMENT_ID = config.DOCUMENT_ID
 # ======================================================================================================================
 
 

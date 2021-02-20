@@ -9,7 +9,8 @@ import os.path
 # ======================================================================================================================
 # Constant file path
 # text files are saved here
-PATH = "G:/School/2020 summer projects/LGCT-schedule-scraper/created_files/"
+import config
+PATH = config.PATH
 # ======================================================================================================================
 #   Possible tour configs:
 #
